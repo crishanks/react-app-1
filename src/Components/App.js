@@ -1,6 +1,7 @@
 import React from 'react';
 import HeartButton from './heart-button';
 import CurrentEvent from './current-event';
+import ReferenceBoxes from './reference-boxes';
 
 class App extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Widget update={this.update.bind(this)} />
         <HeartButton />
         <CurrentEvent />
+        <ReferenceBoxes />
       </div>
     )
   }
