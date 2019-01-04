@@ -1,5 +1,6 @@
 import React from 'react';
 import HeartButton from './heart-button';
+import CurrentEvent from './current-event';
 
 class App extends React.Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends React.Component {
         <h1>{this.state.txt}</h1>
         <Widget update={this.update.bind(this)} />
         <HeartButton />
+        <CurrentEvent />
       </div>
     )
   }
