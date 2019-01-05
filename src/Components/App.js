@@ -2,6 +2,7 @@ import React from 'react';
 import HeartButton from './heart-button';
 import CurrentEvent from './current-event';
 import ReferenceBoxes from './reference-boxes';
+import Incrementor from './incrementor';
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
         <HeartButton />
         <CurrentEvent />
         <ReferenceBoxes />
+        <Incrementor />
       </div>
     )
   }

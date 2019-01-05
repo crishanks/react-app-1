@@ -3,11 +3,14 @@ import React from 'react';
 class ReferenceBoxes extends React.Component {
     constructor() {
         super();
-        this.state = {a: ''}
+        this.state = {
+            a: 'box1',
+            b: 'box2'
+        }
     }
 
     update(event) {
-        return this.setState({
+        this.setState({
             a: this.refs.a.value,
             b: this.refs.b.value
         });
@@ -16,16 +19,14 @@ class ReferenceBoxes extends React.Component {
     render() {
         return (
             <div>
-                <input
-                    ref="a"
-                    type="text"
+                <input 
                     onChange={this.update.bind(this)}
+                    ref="a"
                 /> {this.state.a}
                 <hr />
-                <input
-                    ref="b"
-                    type="text"
+                <input 
                     onChange={this.update.bind(this)}
+                    ref="b"
                 /> {this.state.b}
             </div>
         );
