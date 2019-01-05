@@ -3,6 +3,7 @@ import HeartButton from './heart-button';
 import CurrentEvent from './current-event';
 import ReferenceBoxes from './reference-boxes';
 import Incrementor from './incrementor';
+import NamesSearchBar from './names-search-bar';
 
 class App extends React.Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends React.Component {
         <CurrentEvent />
         <ReferenceBoxes />
         <Incrementor />
+        <NamesSearchBar />
       </div>
     )
   }
