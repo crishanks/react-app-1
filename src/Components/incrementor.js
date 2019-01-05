@@ -14,23 +14,28 @@ class Incrementor extends React.Component {
 
     componentWillMount() {
         console.log('componentWillMount')
+        this.setState({m: 2}) //intercepting the render function
     }
 
     render() {
         console.log("render");
         return (
             <div>
-                <button onClick={this.update}>{this.state.val}</button>
+                <button onClick={this.update}>
+                {this.state.val * this.state.m}
+                </button>
             </div>
         );
     }
 
     componentDidMount() {
         console.log('componentDidMount')
+        this.inc = setInterval(this.update, 500)
     }
 
     componentWillUnmount() {
         console.log('componenteWillUnmount')
+        clearInterval(this.inc)
     }
 }
 
